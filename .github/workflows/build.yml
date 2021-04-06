@@ -25,11 +25,11 @@ jobs:
           allowed_prefixes: 'feature,fix,revert,dependabot'
           ignore: master,develop
           min_length: 3 # Min length of the branch name
-      # - name: Setup .NET Core
-      #   uses: actions/setup-dotnet@v1.7.2
-      #   with:
-      #     dotnet-version: 5.0.x # SDK Version to use.
-      # - name: Build project
-      #   run: dotnet build --configuration Release
-      # - name: Run dotnet tests
-      #   run: dotnet test Daf.Core.Sdk.sln --configuration Release --nologo
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1.7.2
+        with:
+          dotnet-version: 5.0.x # SDK Version to use.
+      - name: Build project
+        run: dotnet build --configuration Release
+      - name: Run dotnet tests
+        run: dotnet test Daf.Core.Sdk.sln --configuration Release --nologo
