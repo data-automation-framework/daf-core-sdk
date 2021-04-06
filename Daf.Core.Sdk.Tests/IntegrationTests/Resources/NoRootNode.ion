@@ -1,0 +1,4 @@
+﻿
+	NotARootNode:
+		NodeA: Name="Node"
+			NodeB: Text="SomeText"

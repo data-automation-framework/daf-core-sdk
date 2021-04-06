@@ -1,0 +1,7 @@
+﻿IntegrationTestPlugin:
+	SsisProjects:
+		SsisProject:
+			Packages:
+				Package:
+					Tasks:
+						ExecuteSql: Name="Task1" BypassPrepare="InvalidValue"	#BypassPrepare is of type boolean

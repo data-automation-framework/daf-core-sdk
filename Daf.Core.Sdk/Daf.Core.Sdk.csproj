@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>true</WarningsAsErrors>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/data-automation-framework/daf-core-sdk</RepositoryUrl>
+    <PackageId>Daf.Core.Sdk</PackageId>
+    <Description>SDK for Daf.Core plugins.</Description>
+    <Authors>bjorhn;petlofg</Authors>
+    <PackageTags>Data Automation Framework;DW;Data Warehouse;SDK</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Contrib.Bcl.Ranges" Version="1.0.0" />
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.3.37">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

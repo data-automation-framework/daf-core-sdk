@@ -1,0 +1,7 @@
+﻿IntegrationTestPlugin:
+	SsisProjects:
+		SsisProject:
+			Packages:
+				Package:
+					Tasks:
+						ExecuteSql: ExecuteSqlName="Task1"	#ExecuteSqlName is not an attributer of ExecuteSql

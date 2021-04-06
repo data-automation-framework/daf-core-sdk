@@ -1,0 +1,11 @@
+﻿[*.cs]
+
+#### Code analysis ####
+
+# CA1707: Identifiers should not contain underscores
+# Having underscores in unit/integration test names is a common naming convention
+dotnet_diagnostic.CA1707.severity = none
+
+# CA1014: Mark assemblies with CLSCompliantAttribute
+# Tests are not supposed to be used by SDK users
+dotnet_diagnostic.CA1014.severity = none
