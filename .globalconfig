@@ -1,0 +1,16 @@
+# Top level entry required to mark this as a global AnalyzerConfig file
+is_global = true
+
+#### Code analysis ####
+
+# CA1307: Specify StringComparison for clarity
+# Doesn't work for char comparisons in netstandard 2.0
+dotnet_diagnostic.CA1307.severity = none
+
+# CA1002: Do not expose generic lists
+# The reader needs to be able to instantiate lists, so the exact type must be known.
+dotnet_diagnostic.CA1002.severity = none
+
+# CS1685: A predefined type is defined in multiple assemblies in the global alias
+# This warning happens in one of our .NET Standard compatibility libraries, impossible to avoid.
+dotnet_diagnostic.CS1685.severity = none
