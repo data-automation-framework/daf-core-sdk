@@ -1,0 +1,7 @@
+﻿IntegrationTestPlugin:
+	SsisProjects:
+		SsisProject:
+			Packages:
+				Package:
+					Tasks:
+                        ExecuteSql: Name="IndentedUsingSpace"	#Space instead of tab indendation

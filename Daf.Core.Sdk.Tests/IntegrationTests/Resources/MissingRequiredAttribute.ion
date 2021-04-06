@@ -1,0 +1,7 @@
+﻿IntegrationTestPlugin:
+	SsisProjects:
+		SsisProject:
+			Packages:
+				Package:
+					Tasks:
+						Expression: Name="MissingRequired" #ExpressionValue is a required attribute

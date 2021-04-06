@@ -1,0 +1,37 @@
+﻿#this is a comment
+PluginThatShouldNotBeParsed:	#Should be skipped since only IntegrationTestPlugin should be parsed
+	NodeA:
+		NodeB: Text="<! This is a quote (") !>"
+IntegrationTestPlugin:		#This is the plugin that should be parsed
+	--- IndentationPush ---
+SsisProjects:
+	SsisProject:
+		Packages:
+			Package:
+				Connections:
+					--- IndentationPush ---
+FlatFileConnection: ConnectionString="TestConnectionString" Name="TestFileConnection" DelayValidation=true TextQualifier="<!"!>"
+	FlatFileColumns:
+		FlatFileColumn: Name="TestCol1" DataType="String" CodePage=1251
+		FlatFileColumn: Name="TestCol2" DataType="Boolean" 
+OleDbConnection: ConnectionString="TestOleDbConnectionString" Name="TestDbConnection"
+--- IndentationPop ---
+				Tasks:
+					ExecuteSql: 
+						Name="TestTask1"
+						ConnectionName="TestOleDbConnectionString"
+						#Test of leading whitespace in text block
+						SqlStatement: Value="<!SELECT A, B, C FROM "test"."TestTable"!>"
+					SequenceContainer: Name="ParentSequenceContainer"
+						PrecedenceConstraints:
+							Inputs:
+								InputPath: OutputPathName=TestTask1
+						Tasks:
+							Expression: Name="TestTask2" ExpressionValue="Test SSIS expression"
+							SequenceContainer: Name="ChildSequenceContainer"
+								Tasks:
+									ExecuteSql: Name="TestTask3"
+--- IndentationPop ---
+
+			
+	

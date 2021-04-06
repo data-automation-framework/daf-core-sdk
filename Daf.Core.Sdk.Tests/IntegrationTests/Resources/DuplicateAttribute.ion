@@ -1,0 +1,7 @@
+﻿IntegrationTestPlugin:
+	SsisProjects:
+		SsisProject:
+			Packages:
+				Package:
+					Tasks:
+						ExecuteSql: Name="TestTask1" Name="TestTask2" #Duplicate attribute Name

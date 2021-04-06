@@ -1,0 +1,8 @@
+﻿IntegrationTestPlugin:
+	SsisProjects:
+		SsisProject:
+			Packages:
+				Package:
+					Tasks:
+						ExecuteSql: Name="TestTask1"
+							SqlStmnt: Value="Statement" #Node SqlStmnt is not a child of ExecuteSql
