@@ -74,7 +74,7 @@ jobs:
           draft: false
           prerelease: false
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Move latest MajorMinor version tag
         uses: EndBug/latest-tag@v1.4.0
         with:
