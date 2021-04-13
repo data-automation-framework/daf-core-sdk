@@ -31,10 +31,6 @@ jobs:
         uses: actions/setup-dotnet@v1.7.2
         with:
           dotnet-version: 5.0.x # SDK Version to use.
-          #source-url: https://api.nuget.org/v3/index.json
-          source-url: https://nuget.pkg.github.com/data-automation-framework/index.json
-        env:
-          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build project
         run: dotnet build --configuration Release
       - name: Run dotnet tests
@@ -42,8 +38,7 @@ jobs:
       - name: Create the nuget package
         run: dotnet pack Daf.Core.Sdk/Daf.Core.Sdk.csproj --configuration Release --output Daf.Core.Sdk/bin/Release/Publish
       - name: Publish to Nuget
-        #run: dotnet nuget push Daf.Core.Sdk/bin/Release/Publish/**/*.nupkg --skip-duplicate --api-key ${{ secrets.NUGET }}
-        run: dotnet nuget push Daf.Core.Sdk/bin/Release/Publish/**/*.nupkg --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}
+        run: dotnet nuget push Daf.Core.Sdk/bin/Release/Publish/**/*.nupkg --skip-duplicate --api-key ${{ secrets.NUGET }}
       - name: Setup Nerdbank.GitVersioning
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/release/*' # Only run this step in master and release branches.
         id: nbgv
