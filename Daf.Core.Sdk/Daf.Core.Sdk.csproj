@@ -16,7 +16,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Contrib.Bcl.Ranges" Version="1.0.0" />
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.205">
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.216">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
