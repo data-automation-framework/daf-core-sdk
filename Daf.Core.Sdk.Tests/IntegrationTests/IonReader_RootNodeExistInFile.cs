@@ -3,7 +3,7 @@
 
 using System.IO;
 using Daf.Core.Sdk.Ion.Reader;
-using Daf.Core.Sdk.Tests.Plugins;
+using Daf.Core.Sdk.Tests.IntegrationTests.Resources;
 using Xunit;
 
 namespace Daf.Core.Sdk.Tests.IntegrationTests

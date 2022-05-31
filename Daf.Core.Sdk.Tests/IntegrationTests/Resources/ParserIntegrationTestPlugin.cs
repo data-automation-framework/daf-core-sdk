@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Daf.Core.Sdk.Tests.Plugins
+namespace Daf.Core.Sdk.Tests.IntegrationTests.Resources
 {
 	[IsRootNode]
 	public class IntegrationTestPlugin : IEquatable<IntegrationTestPlugin>
