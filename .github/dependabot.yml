@@ -4,9 +4,9 @@ updates:
   - package-ecosystem: "nuget"
     # Look in the root directory
     directory: "/"
-    # Check for updates once a week
+    # Check for updates once a month
     schedule:
-      interval: "weekly"
+      interval: "monthly"
       day: "friday"
       time: "18:00"
       timezone: "Europe/Stockholm"
@@ -14,9 +14,9 @@ updates:
   - package-ecosystem: "github-actions"
     # Look in the root directory
     directory: "/"
-    # Check for updates once a week
+    # Check for updates once a month
     schedule:
-      interval: "weekly"
+      interval: "monthly"
       day: "friday"
       time: "18:00"
       timezone: "Europe/Stockholm"
