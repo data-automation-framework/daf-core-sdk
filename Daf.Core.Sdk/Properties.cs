@@ -19,8 +19,7 @@ namespace Daf.Core.Sdk
 		{
 			get
 			{
-				if (_instance == null)
-					_instance = new Properties();
+				_instance ??= new Properties();
 
 				return _instance;
 			}
